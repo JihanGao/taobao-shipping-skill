@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.jihangao.solidcore-watcher</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>/Users/jihangao/Library/Application Support/solidcore-watcher/run-check.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/jihangao/Library/Application Support/solidcore-watcher</string>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/jihangao/Library/Application Support/solidcore-watcher/.local/logs/launchd.stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/jihangao/Library/Application Support/solidcore-watcher/.local/logs/launchd.stderr.log</string>
+
+    <key>StartCalendarInterval</key>
+    <array>
+      <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>0</integer></dict>
+      <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>5</integer></dict>
+      <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>10</integer></dict>
+      <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>15</integer></dict>
+      <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>20</integer></dict>
+      <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>25</integer></dict>
+      <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>30</integer></dict>
+      <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>35</integer></dict>
+      <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>40</integer></dict>
+      <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>45</integer></dict>
+      <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>50</integer></dict>
+      <dict><key>Hour</key><integer>0</integer><key>Minute</key><integer>55</integer></dict>
+      <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>0</integer></dict>
+      <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>5</integer></dict>
+      <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>10</integer></dict>
+      <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>15</integer></dict>
+      <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>20</integer></dict>
+      <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>25</integer></dict>
+      <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>30</integer></dict>
+      <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>35</integer></dict>
+      <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>40</integer></dict>
+      <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>45</integer></dict>
+      <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>50</integer></dict>
+      <dict><key>Hour</key><integer>1</integer><key>Minute</key><integer>55</integer></dict>
+      <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>0</integer></dict>
+      <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>5</integer></dict>
+      <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>10</integer></dict>
+      <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>15</integer></dict>
+      <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>20</integer></dict>
+      <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>25</integer></dict>
+      <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>30</integer></dict>
+      <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>35</integer></dict>
+      <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>40</integer></dict>
+      <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>45</integer></dict>
+      <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>50</integer></dict>
+      <dict><key>Hour</key><integer>2</integer><key>Minute</key><integer>55</integer></dict>
+      <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>0</integer></dict>
+      <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>5</integer></dict>
+      <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>10</integer></dict>
+      <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>15</integer></dict>
+      <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>20</integer></dict>
+      <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>25</integer></dict>
+      <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>30</integer></dict>
+      <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>35</integer></dict>
+      <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>40</integer></dict>
+      <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>45</integer></dict>
+      <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>50</integer></dict>
+      <dict><key>Hour</key><integer>3</integer><key>Minute</key><integer>55</integer></dict>
+      <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>0</integer></dict>
+      <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>5</integer></dict>
+      <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>10</integer></dict>
+      <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>15</integer></dict>
+      <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>20</integer></dict>
+      <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>25</integer></dict>
+      <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>30</integer></dict>
+      <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>35</integer></dict>
+      <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>40</integer></dict>
+      <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>45</integer></dict>
+      <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>50</integer></dict>
+      <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>55</integer></dict>
+      <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>0</integer></dict>
+      <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>5</integer></dict>
+      <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>10</integer></dict>
+      <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>15</integer></dict>
+      <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>20</integer></dict>
+      <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>25</integer></dict>
+      <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>30</integer></dict>
+      <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>35</integer></dict>
+      <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>40</integer></dict>
+      <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>45</integer></dict>
+      <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>50</integer></dict>
+      <dict><key>Hour</key><integer>5</integer><key>Minute</key><integer>55</integer></dict>
+    </array>
+  </dict>
+</plist>

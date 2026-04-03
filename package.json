@@ -1,0 +1,50 @@
+{
+  "name": "grammarloop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "dev:webpack": "next dev",
+    "dev:fresh": "rm -rf .next && next dev --turbopack",
+    "dev:fresh:webpack": "rm -rf .next && next dev",
+    "dev:watch": "while true; do npm run dev || true; sleep 2; done",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "tsx prisma/seed.ts",
+    "solidcore:login": "node --import tsx scripts/solidcore/login.ts",
+    "solidcore:check": "node --import tsx scripts/solidcore/check.ts",
+    "solidcore:test-notify": "node --import tsx scripts/solidcore/test-notify.ts",
+    "solidcore:watch": "node --import tsx scripts/solidcore/watch.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "dotenv": "^16.4.7",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^0.539.0",
+    "next": "^15.2.2",
+    "openai": "^4.91.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.22.0",
+    "eslint-config-next": "^15.2.2",
+    "playwright": "^1.59.1",
+    "postcss": "^8.5.3",
+    "prisma": "^6.5.0",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}

@@ -1,0 +1,155 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum MistakeStatus {
+  new
+  needs_review
+  mastered
+}
+
+enum PartOfSpeech {
+  noun
+  verb
+  adjective
+  adverb
+  other
+}
+
+enum ThemeCategory {
+  time
+  travel
+  emotion
+  life
+  food
+  shopping
+  nature
+  study
+  work
+  society
+  misc
+}
+
+enum AutoKbSubCategory {
+  // time
+  numbers
+  date
+  frequency
+  age
+
+  // travel
+  direction
+  places
+  transportation
+  travel
+
+  // emotion
+  feelings
+  emotions
+  relationships
+
+  // life
+  family
+  body
+  housing
+  furniture
+  health
+  sports
+  hobbies
+
+  // food
+  food
+  drinks
+  restaurant
+  dining
+
+  // shopping
+  shopping
+  colors
+  clothing
+
+  // nature
+  animals
+  plants
+  weather
+  space
+  nature
+
+  // study
+  school
+  language
+  learning_tools
+
+  // work
+  jobs
+  office
+  business
+
+  // society
+  politics
+  religion
+  law
+  events
+
+  // misc
+  other
+}
+
+model Mistake {
+  id                Int           @id @default(autoincrement())
+  language          String
+  learnerPrompt     String        @default("")
+  question          String
+  userAnswer        String
+  correctAnswer     String
+  errorType         String
+  aiAnswer          String        @default("")
+  aiExplanationJson String
+  chatTranscriptJson String       @default("[]")
+  screenshotPath    String?
+  status            MistakeStatus @default(new)
+  isFavorite        Boolean       @default(false)
+  isDeleted         Boolean       @default(false)
+  deletedAt         DateTime?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+}
+
+model VocabularyEntry {
+  id             Int      @id @default(autoincrement())
+  language       String
+  learnerPrompt  String   @default("")
+  term           String
+  lemma          String   @default("")
+  reading        String   @default("")
+  aiAnswer       String
+  summaryJson    String   @default("{}")
+  chatTranscriptJson String @default("[]")
+  isSimpleWord   Boolean  @default(true)
+  screenshotPath String?
+
+  // Auto Knowledge Base classification (MVP)
+  partOfSpeech        PartOfSpeech     @default(other)
+  partOfSpeech_zh     String           @default("其他")
+  partOfSpeech_en     String           @default("other")
+  themeCategory       ThemeCategory    @default(misc)
+  themeCategory_zh    String           @default("其他")
+  themeCategory_en    String           @default("misc")
+  subCategory         AutoKbSubCategory @default(other)
+  subCategory_zh      String           @default("其他")
+  subCategory_en      String           @default("other")
+
+  exampleSentence    String?
+  exampleTranslation String?
+
+  isFavorite     Boolean  @default(false)
+  isDeleted      Boolean  @default(false)
+  deletedAt      DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}

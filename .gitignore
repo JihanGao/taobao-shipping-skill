@@ -1,0 +1,11 @@
+.DS_Store
+.next
+node_modules
+.env
+.local
+coverage
+dist
+*.tsbuildinfo
+prisma/dev.db
+prisma/dev.db-journal
+public/uploads

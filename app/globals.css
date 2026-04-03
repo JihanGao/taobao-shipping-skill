@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-paper text-slate-900 antialiased;
+  background-image: none;
+  background-color: #fffdf8;
+}
+
+a {
+  @apply transition-colors;
+}
+
+input,
+select,
+textarea {
+  @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none transition focus:border-sun focus:ring-2 focus:ring-sun/20;
+}
+
+button {
+  @apply transition-transform duration-150;
+}
+
+.shell {
+  @apply mx-auto min-h-screen max-w-6xl px-4 py-8 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply rounded-3xl border border-white/80 bg-white/90 p-6 shadow-card backdrop-blur;
+}
+
+.section-title {
+  @apply text-lg font-semibold tracking-tight text-ink;
+}
