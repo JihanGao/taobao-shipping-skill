@@ -1,0 +1,15 @@
+{
+  "name": "taobao-shipping-skill",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "taobao:login": "node --import tsx scripts/taobao-shipping/login.ts",
+    "taobao:collect": "node --import tsx scripts/taobao-shipping/collect.ts",
+    "taobao:prepare-sheet": "node --import tsx scripts/taobao-shipping/prepare-sheet.ts"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
