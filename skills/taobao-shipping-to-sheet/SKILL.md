@@ -26,11 +26,13 @@ Use the bundled Playwright scripts already wired into the repo:
 
 - `npm run taobao:login`
 - `npm run taobao:collect -- --page <N>`
+- `npm run taobao:prepare-sheet -- --title "<TITLE>"`
 
 Important:
 
 - `taobao:login` opens Chrome and saves Taobao login state into `.local/taobao-shipping/storage-state.json`
 - `taobao:collect -- --page <N>` jumps to the requested page, hovers each `查看物流`, and writes structured JSON to `.local/taobao-shipping/logistics-results.json`
+- `taobao:prepare-sheet -- --title "<TITLE>"` converts the collected JSON into a sheet-ready payload at `.local/taobao-shipping/sheet-payload.json`
 - The collector output includes `orderId`, `shopName`, `itemDescriptions`, `itemSummary`, `carrier`, `tracking`, `orderStatus`, and `logisticsStatus`
 
 After collection, read only the JSON output file and avoid asking the user to manually paste Console output unless Playwright is blocked.
@@ -51,7 +53,7 @@ Prefer the Google Drive plugin and tools for all Drive operations.
 
 ### Row mapping
 
-Use the extracted JSON rows and map them into the shipping sheet like this:
+Prefer reading `.local/taobao-shipping/sheet-payload.json` after running `taobao:prepare-sheet`. If that file is unavailable, map the extracted JSON rows like this:
 
 - Column A: sequential row number starting at `1`
 - Column B: `shopName`
@@ -68,6 +70,7 @@ When the template already contains title and header rows, preserve them and star
 
 - For the target sheet layout: `references/sheet-template.md`
 - For the collected data: `.local/taobao-shipping/logistics-results.json`
+- For the normalized sheet payload: `.local/taobao-shipping/sheet-payload.json`
 
 ## Output expectations
 

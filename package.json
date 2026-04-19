@@ -14,6 +14,7 @@
     "seed": "tsx prisma/seed.ts",
     "taobao:login": "node --import tsx scripts/taobao-shipping/login.ts",
     "taobao:collect": "node --import tsx scripts/taobao-shipping/collect.ts",
+    "taobao:prepare-sheet": "node --import tsx scripts/taobao-shipping/prepare-sheet.ts",
     "solidcore:login": "node --import tsx scripts/solidcore/login.ts",
     "solidcore:check": "node --import tsx scripts/solidcore/check.ts",
     "solidcore:test-notify": "node --import tsx scripts/solidcore/test-notify.ts",

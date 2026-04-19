@@ -74,3 +74,50 @@ This repo also includes a local `solidcore` watcher for member-only schedule mon
 5. Optional on macOS: install `scripts/solidcore/com.jihangao.solidcore-watcher.plist` as a `LaunchAgent` for overnight automatic checks.
 
 Detailed notes live in [scripts/solidcore/README.md](/Users/jihangao/Documents/Playground/scripts/solidcore/README.md).
+
+## Taobao shipping skill
+
+This repo also includes a reusable Taobao logistics extraction skill for Codex.
+
+What it covers:
+
+1. Open Taobao bought-items, jump to a user-specified page, and extract order ids, shop names, item descriptions, carriers, and tracking numbers with real Playwright hover events.
+2. Normalize the extracted data into the same shipping-sheet column shape used by the existing `Jihan` sea-shipping template so Codex can duplicate a Google Sheet template and write rows into Drive.
+
+### Local commands
+
+1. Save Taobao login state:
+
+```bash
+npm run taobao:login
+```
+
+2. Collect a specific bought-items page:
+
+```bash
+npm run taobao:collect -- --page 1
+```
+
+3. Convert the collected JSON into a sheet-ready payload:
+
+```bash
+npm run taobao:prepare-sheet -- --title "Jihan Gao 4月中海运"
+```
+
+Artifacts are written to:
+
+- `.local/taobao-shipping/logistics-results.json`
+- `.local/taobao-shipping/sheet-payload.json`
+
+### Skill entrypoint
+
+The Codex skill lives at:
+
+- [skills/taobao-shipping-to-sheet/SKILL.md](/Users/jihangao/Documents/playground/skills/taobao-shipping-to-sheet/SKILL.md)
+
+Use it when you want Codex to:
+
+- scrape Taobao logistics from a specified bought-items page
+- collect product descriptions alongside tracking numbers
+- duplicate a Google Sheets shipping template
+- write the normalized rows into Google Drive
